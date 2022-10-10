@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#define PI 3.14159265
+
+int main()
+{
+    int vtangen, jarak;
+    float vtang;
+    double value, x, result;
+    scanf("%d", &vtangen);
+    value = PI / 180;
+    x = 45;
+    result = sin(2*x*value);
+    if (vtangen >= 1 && vtangen <= 10) {
+        vtangen--;
+        jarak = pow(vtangen, 2) * result / 10;
+        printf("%d ", jarak);
+        vtang = sqrt(jarak * 10 / result) + 1;
+        printf("%f", vtang);
+    } else if (vtangen >= 11 && vtangen <= 20) {
+        vtangen = vtangen - 3;
+        jarak = pow(vtangen, 2) * result / 10;
+        printf("%d ", jarak);
+        vtang = sqrt(jarak * 10 / result) + 3;
+        printf("%f", vtang);
+    } else if (vtangen >= 21 && vtangen <= 30) {
+        vtangen = vtangen - 5;
+        jarak = pow(vtangen, 2) * result / 10;
+        printf("%d ", jarak);
+        vtang = sqrt(jarak * 10 / result) + 5;
+        printf("%f", vtang);
+    }
+    return 0;
+}
